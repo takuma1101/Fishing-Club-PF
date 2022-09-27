@@ -1,24 +1,14 @@
-# README
+# <Fishing Club>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+### サイトテーマ
+###<釣り場のスポットや様々な釣り方を共有できるコミュニティサイト>
 
-Things you may want to cover:
+### テーマを選んだ理由
+###<私自身釣りが趣味で様々な釣りをするのですが他にどんな釣り方があるのかとか穴場のスポットを共有出来たらなと思いこのテーマを選定しました>
 
-* Ruby version
+### ターゲットユーザ
+###<釣りが好きな人>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 主な利用シーン
+###<新しい釣りを始めたいときや初めてのスポットで釣りをしたいとき>
