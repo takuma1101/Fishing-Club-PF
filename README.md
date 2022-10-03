@@ -18,11 +18,11 @@
 * 新しい釣りを始めたいときや初めてのスポットで釣りをしたいとき
 * 釣りを始めたばかりの人や始めようと考えている人が釣りについて調べたいとき
 
-##設計書
+## 設計書
 
 
-###実装リスト
-###https://docs.google.com/spreadsheets/d/1ZP6K32tBHF1MnC0OCnkC23G6gpAebV941JKbukzrqeE/edit?usp=sharing
+### 実装リスト
+### https://docs.google.com/spreadsheets/d/1ZP6K32tBHF1MnC0OCnkC23G6gpAebV941JKbukzrqeE/edit?usp=sharing
 
 ## 開発環境
 - OS：Linux(CentOS)
