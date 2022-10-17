@@ -14,10 +14,7 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       ## Rememberable
       t.datetime :remember_created_at
 
-       t.string :last_name
-      t.string :first_name
-      t.string :last_name_kana
-      t.string :first_name_kana
+       t.string :user_name
       t.string :telephone_number
 
       ## Trackable
