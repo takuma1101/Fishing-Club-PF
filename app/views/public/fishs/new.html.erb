@@ -1,0 +1,10 @@
+   <%= form_with model: @fish do |f| %>
+
+      <div class="post-image">
+        <%= attachment_image_tag @fish, :image, class: "img-square", fallback: "no_image.jpg", size:"300x300" %>
+      </div>
+
+      <%= f.attachment_field :image, placeholder: "画像" %>
+    </div>
+　　<%= f.submit "登録"%>
+

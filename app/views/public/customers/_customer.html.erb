@@ -1,0 +1,22 @@
+ <h3>Profile</h3><br>
+ <div class="ml-4">
+ <%= image_tag @customer.get_profile_image(150,150)%>
+ </div>
+ </br>
+ <table class="table table-borderless">
+  <tbody>
+    <tr>
+	  <th></th>
+	  <th></th>
+  </tr>
+  <tr>
+	  <th>name</th>
+	  <th><%= @customer.user_name %></th>
+  </tr>
+  <tr>
+    <th>Intro</th>
+	  <th><%= @customer.introduction %></th>
+  </tr>
+</tbody>
+</table>
+   <%= link_to "編集する",edit_public_customer_path(current_customer), class:"btn btn-success"%>

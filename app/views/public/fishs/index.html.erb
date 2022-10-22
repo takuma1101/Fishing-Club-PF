@@ -1,0 +1,12 @@
+<div class="container">
+  <% if flash[:notice] %>
+ <p id=notice><%= flash[:notice] %></p>
+  <% else %>
+ <p id=notice></p>
+  <% end %>
+  <div class="row">
+        <div class="col-md-4 ml-0">
+           <%= render 'public/customers/customer', customer: @customer %>
+        </div>
+        </div>
+        </div>
