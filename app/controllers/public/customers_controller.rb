@@ -1,5 +1,10 @@
 class Public::CustomersController < ApplicationController
 
+  def index
+   @customer = current_customer
+   @customers = Customer.all
+  end
+
   def show
      @customer = Customer.find(params[:id])
      @customers = current_customer

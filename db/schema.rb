@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2022_10_22_202434) do
   create_table "fish", force: :cascade do |t|
     t.string "title"
     t.string "body"
+    t.string "image_id"
     t.integer "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -3,7 +3,7 @@ class Fish < ApplicationRecord
    has_one_attached :profile_image
     belongs_to :customer
 
-    attachment :image
+   has_one_attached :image
 
     validates :title, presence: true
     validates :body, presence: true, length: { maximum: 200}

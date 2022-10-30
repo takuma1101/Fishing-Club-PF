@@ -1,10 +1,31 @@
-   <%= form_with model: @fish do |f| %>
+<%= render 'public/fishs/error', model: @fish %>
+<div class="container">
+  <% if flash[:notice] %>
+  <p id=notice><%= flash[:notice] %></p>
+  <% else %>
+  <p id=notice></p>
+  <% end %>
+  <h3>投稿画面</h3>
+  <div class="row">
+  <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+   <%= form_with model: @fish, url: public_fishs_path do |f| %>
+    <div class="field">
+           <h4><%= f.label :画像%><br></h4>
+           <%= f.file_field :image, accept: "image/*"  %>
+        </div><br>
 
-      <div class="post-image">
-        <%= attachment_image_tag @fish, :image, class: "img-square", fallback: "no_image.jpg", size:"300x300" %>
-      </div>
+        <div class="field">
+           <h5><%= f.label :タイトル %></h5>
+           <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
+        </div><br>
 
-      <%= f.attachment_field :image, placeholder: "画像" %>
-    </div>
-　　<%= f.submit "登録"%>
+        <div class="field mb-0">
+           <h5><%= f.label :内容%></h5>
+            <%= f.text_area :body, size: "50x5" %>
+        </div>
 
+       <h5><%= f.submit "投稿する"%></h5>
+       <%end%>
+</div>
+  </div>
+  </div>

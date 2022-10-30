@@ -1,0 +1,35 @@
+<div class="container">
+  <% if flash[:notice] %>
+ <p id=notice><%= flash[:notice] %></p>
+  <% else %>
+ <p id=notice></p>
+  <% end %>
+  <div class="row">
+        <div class="col-md-4 ml-0">
+           <%= render 'public/customers/customer', customer: @customer %>
+        </div>
+         <div class="col-md-7 ">
+          <h4>Users</h4><br>
+      <table class="table">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>user</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+   <% @customers.each do |customer| %>
+  <tbody>
+      <tr>
+        <td><%= image_tag customer.get_profile_image(150,150), accept: "image/*" %></td>
+        <td><%= customer.user_name %></td>
+        <td><%= link_to "Show", public_customer_path(customer.id) %></td>
+      </tr>
+  </tbody>
+   <% end %>
+</table>
+
+
+    </div>
+   </div>
+ </div>

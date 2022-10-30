@@ -1,2 +1,37 @@
-<h1>Public::Fishs#show</h1>
-<p>Find me in app/views/public/fishs/show.html.erb</p>
+<div class="container">
+  <% if flash[:notice] %>
+ <p id=notice><%= flash[:notice] %></p>
+  <% else %>
+ <p id=notice></p>
+  <% end %>
+  <div class="row">
+        <div class="col-md-3 ml-0">
+           <%= render 'public/customers/customer', customer: @customer %>
+        </div>
+
+    <div class="col-md-3 ml-4">
+      <h4>My page</h4><br>
+          <%= image_tag @fish.image, size: "200x200" %>
+    </div>
+       <div class="col-md-4">
+        <table class="table table-borderless mt-5">
+          <tr>
+	          <th>user_name</th>
+	          <th><%= @customer.user_name%></th>
+	        </tr>
+	         <tr>
+	          <th>title</th>
+	          <th><%= @fish.title%></th>
+	        </tr>
+	        <tr>
+	          <th>enjoyed</th>
+	          <th><%= @fish.body %></th>
+	        </tr>
+	        <% if @customer = current_customer %>
+	        <th><%= link_to "編集する", edit_public_fish_path(@fish), class:"btn btn-success"%></th>
+	        <%end%>
+
+      </table>
+  </div>
+  </div>
+  </div>
