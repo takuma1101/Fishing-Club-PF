@@ -1,0 +1,6 @@
+<%= form_with url: search_public_fishs_path, local: true, method: :get do |f| %>
+<%= form.text_field :keyword, :value => @keyword, placeholder: "キーワードで探す", :required => true %>
+<%= button_tag :type => "submit", :name => nil do %>
+<i class="fas fa-search"></i>
+<% end %>
+<% end %>

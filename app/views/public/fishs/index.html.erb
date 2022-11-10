@@ -5,11 +5,40 @@
  <p id=notice></p>
   <% end %>
   <div class="row">
-        <div class="col-md-4 ml-0">
+        <div class="col-md-3 ml-0">
            <%= render 'public/customers/customer', customer: @customer %>
         </div>
-        <div>
-      　　<h4>List of posts</h4>
+      　
+      <h4>List of post</h4><br>
+         <div class="col-md-5">
+  <% @fishs.each do |fish| %>
+     <table class="mt-5">
+      <tr>
+        <td>
+            <%= link_to  public_fish_path(fish) do %>
+            <%= image_tag fish.image, size: "200x200" %>
+            <%end%>
+        </td>
+        <td>
+            <table class="table table-borderless ml-4">
+             <tr>
+	          <th>user_name</th>
+	          <th><%= @customer.user_name%></th>
+	        </tr>
+	         <tr>
+	          <th>title</th>
+	          <th><%= fish.title%></th>
+	        </tr>
+	        <tr>
+	          <th>enjoyed</th>
+	          <th><%= fish.body %></th>
+	        </tr>
+          </table>
+          </td>
+         </tr>
+         </table>
+         <%end%>
+      　　
     　　</div>
    </div>
  </div>

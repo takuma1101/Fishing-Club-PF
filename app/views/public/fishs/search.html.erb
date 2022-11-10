@@ -1,0 +1,10 @@
+ <h2><%=  @section_title %></h2>
+  <ul>
+    <% @fishs.each do |fish| %>
+      <li>
+        <%= link_to public_fishs_path do %>
+          <%= image_tag fish.image.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), if fish.image.attached? %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>

@@ -16,7 +16,9 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 
 namespace :public do
    resources :customers, only:[:index, :show, :edit, :update]
-   resources :fishs, only:[:new, :index, :show, :edit, :create, :update]
+   resources :fishs, only:[:new, :index, :show, :edit, :create, :update] do
+       get :search, on: :collection
+   end
   end
 
   namespace :admin do

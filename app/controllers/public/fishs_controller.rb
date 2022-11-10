@@ -6,6 +6,7 @@ class Public::FishsController < ApplicationController
 
   def index
      @customer = current_customer
+     @fishs = Fish.all
   end
 
    def create
@@ -26,6 +27,17 @@ class Public::FishsController < ApplicationController
   end
 
   def edit
+  end
+  
+  def  search
+  @section_title = "「#{params[:search]}」の検索結果"
+  @fishs = if params[:search].present?
+             Fish.where(['title LIKE ? OR body LIKE ?',
+                        "%#{params[:search]}%", "%#{params[:search]}%"])
+                 .paginate(page: params[:page], per_page: 12).recent
+           else
+             Fish.none
+           end 
   end
 end
 
